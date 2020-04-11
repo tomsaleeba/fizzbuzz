@@ -2,6 +2,14 @@
 // Author: Tom Saleeba
 const strategies = [
   {
+    condition: function isDivisibleBy3And5(testValue) {
+      return buildIsDivisibleByFn(3)(testValue) && buildIsDivisibleByFn(5)(testValue)
+    },
+    action: function() {
+      console.log('fizzbuzz')
+    },
+  },
+  {
     condition: function isDivisibleBy3(testValue) {
       return buildIsDivisibleByFn(3)(testValue)
     },
